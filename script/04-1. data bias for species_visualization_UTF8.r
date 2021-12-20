@@ -6,14 +6,14 @@ library(ggbreak)
 library(ggplot2)
 
 
-TBN_APIocc_all <- fread(here("input", "data", "TBN_APIocc20210427.csv"),
+TBN_APIocc_all <- fread(here("rawdata", "TBN_APIocc20210427.csv"),
       sep = ",",fill=TRUE, encoding = "UTF-8", colClasses="character")
 
 
-ebird <- fread(here("input", "data", "ebird_202012.csv"),
+ebird <- fread(here("rawdata", "ebird_202012.csv"),
                sep = "\t", fill=TRUE, encoding = "UTF-8", colClasses="character", quote ="")
 
-class_list <- fread(here("input", "data", "data gap of splist", "TBN_classlist.csv"), sep = ",",fill=TRUE) %>%
+class_list <- fread(here("input", "data", "data bias of taxon", "TBN_classlist.csv"), sep = ",",fill=TRUE) %>%
   unique()
 
 #### subset TBN_API column ####
