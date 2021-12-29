@@ -7,7 +7,7 @@ library(ggplot2)
 
 #### calculate the ideal sampling ####
 
-class_list <- fread(here("input", "data", "databias_taxon.csv.csv"))
+class_list <- fread(here("input", "data", "databias_taxon.csv"))
 for(i in 1:nrow(class_list)){
   class_list $ ideal_number[i] <- (sum(class_list$occurrence_count)/sum(class_list$number_of_species))*class_list$number_of_species[i]
 }

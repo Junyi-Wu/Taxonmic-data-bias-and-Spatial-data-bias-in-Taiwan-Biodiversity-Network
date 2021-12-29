@@ -5,12 +5,13 @@
 ## Data
 下載"input\data"資料夾
 * 20210630 TTsplist.csv
-* vis_table_databias_taxon.csv
-* v
+* databias_taxon.csv
+* databias_taxon_withyear.csv
 
 ## Source code
 下載"script"資料夾
 * data bias for taxon.r
+* data bias for taxon with year.r
 
 ## Taxonomic Data Bias
 >生物類群資料偏差計算公式：類群實際資料筆數-(總資料筆數*物種比例)
@@ -25,12 +26,25 @@
 * files：databias_taxon.csv
 * script：data bias for taxon.r
 
+#### Result
     
 ![](https://i.imgur.com/LUYiE2A.png)
 
 
 ### 生物類群在年間的資料偏差
 根據TBN生物類群區分，計算自有資料以來至今(1901-2020)，每20年間的資料偏差
+* data prepare
+    1. rbind TBN occurrence data & eBird data
+    2. calculate the number of occurrence by taxonGroup
+    3. filter `taxonRank` at `Species` and calculate the number of species in TTsplist
+    4. prepare time table
+    5. Split data with time table by column`year` 
+ 
+* files：databias_taxon_withyear.csv
+* script：data bias for taxon with year.r
+
+#### Result
+![](https://i.imgur.com/mMZV5n0.png)
 
 ## Spatial Data Bias
 >空間資料偏差計算公式：行政區資料筆數-(總資料筆數*行政區面積比例)
@@ -50,7 +64,3 @@
     * versoin：2020/12/31以前
     * 概述：下載臺灣範圍資料
     * 下載方式：[GBIF](https://www.gbif.org/occurrence/search?advanced=1&dataset_key=4fa7b334-ce0d-4e88-aaae-2e0c138d049e&publishing_country=TW)
-
-
-
-
