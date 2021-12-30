@@ -8,10 +8,17 @@
 * databias_taxon.csv
 * databias_taxon_withyear.csv
 
+## polygon
+下載"input\polygon"資料夾
+* databias_spatial_county.shp
+* databias_spatial_town.shp
+
 ## Source code
 下載"script"資料夾
 * data bias for taxon.r
 * data bias for taxon with year.r
+* data bias for spatial of county.r
+* data bias for spatial of town.r
 
 ## Taxonomic Data Bias
 >生物類群資料偏差計算公式：類群實際資料筆數-(總資料筆數*物種比例)
@@ -51,9 +58,33 @@
 
 ### 縣市的資料偏差
 以縣市作空間區分，計算個縣市的資料偏差
+* data prepare
+    1. rbind TBN occurrence data & eBird data
+    2. filter occurrence data by `decimalLongitude` & `decimalLatitude`
+    3. transform occurrence to geodata and set crs to TWD97
+    4. prepare county polygon and caluate area in km^2
+    5. selet occurrence polygon to county polygon by location
+ 
+* files：databias_spatial_county.shp
+* script：data bias for spatial of county.r
+
+#### Result
+![](https://i.imgur.com/T4dT18q.png)
 
 ### 鄉鎮區的資料偏差
 以鄉鎮區作空間區分，計算個縣市的資料偏差
+* data prepare
+    1. rbind TBN occurrence data & eBird data
+    2. filter occurrence data by `decimalLongitude` & `decimalLatitude`
+    3. transform occurrence to geodata and set crs to TWD97
+    4. prepare town polygon and caluate area in km^2
+    5. selet occurrence polygon to town polygon by location
+ 
+* files：databias_spatial_town.shp
+* script：data bias for spatial of town.r
+
+#### Result
+![](https://i.imgur.com/oyCMNnL.jpg)
 
 ## Raw data
 * TBN data：
@@ -64,3 +95,12 @@
     * versoin：2020/12/31以前
     * 概述：下載臺灣範圍資料
     * 下載方式：[GBIF](https://www.gbif.org/occurrence/search?advanced=1&dataset_key=4fa7b334-ce0d-4e88-aaae-2e0c138d049e&publishing_country=TW)
+
+* Taiwan county polygon：
+    * versoin：1
+    * 概述：政府資料開放授權條款-第1版
+    * 下載方式：[政府資料開放平臺-直轄市、縣市界線(TWD97經緯度)](https://data.gov.tw/dataset/7442)
+* Taiwan town polygon：
+    * versoin：1
+    * 概述：政府資料開放授權條款-第1版
+    * 下載方式：[政府資料開放平臺-鄉鎮市區界線(TWD97經緯度)](https://data.gov.tw/dataset/7441)
