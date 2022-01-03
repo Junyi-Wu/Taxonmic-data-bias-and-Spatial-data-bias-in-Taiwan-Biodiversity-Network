@@ -104,3 +104,7 @@
     * versoin：1
     * 概述：政府資料開放授權條款-第1版
     * 下載方式：[政府資料開放平臺-鄉鎮市區界線(TWD97經緯度)](https://data.gov.tw/dataset/7441)
+
+## References
+
+Troudet, J., Grandcolas, P., Blin, A. et al. Taxonomic bias in biodiversity data and societal preferences. Sci Rep 7, 9132 (2017). https://doi.org/10.1038/s41598-017-09084-6
