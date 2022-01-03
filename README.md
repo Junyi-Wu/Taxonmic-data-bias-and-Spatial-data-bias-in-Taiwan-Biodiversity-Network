@@ -4,7 +4,6 @@
 
 ## Data
 下載"input\data"資料夾
-* 20210630 TTsplist.csv
 * databias_taxon.csv
 * databias_taxon_withyear.csv
 
