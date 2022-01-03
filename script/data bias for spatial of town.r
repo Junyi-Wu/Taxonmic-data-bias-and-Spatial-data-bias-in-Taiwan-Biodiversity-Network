@@ -9,7 +9,7 @@ town <- st_read(here("input", "polygon", "databias_spatial_town.shp"))%>%
   st_set_crs(4326)
 
 for(j in 1:nrow(town)){
-  town$data_gap_value[j] <-town$point_count[j]-(sum(town$point_count)/sum(town$Area_sqkm))*town$Area_sqkm[j]
+  town$data_gap_value[j] <-town$pnt_cnt[j]-(sum(town$pnt_cnt)/sum(town$Ar_sqkm))*town$Ar_sqkm[j]
 } 
 
 town$occ_type <- ifelse(town$data_gap_value < 0, "below", "above")
