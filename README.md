@@ -68,7 +68,8 @@
 * script：data bias for spatial of county.r
 
 #### Result
-![](https://i.imgur.com/T4dT18q.png)
+![](https://i.imgur.com/JypYC9t.png)
+
 
 ### 鄉鎮區的資料偏差
 以鄉鎮區作空間區分，計算個縣市的資料偏差
@@ -83,7 +84,8 @@
 * script：data bias for spatial of town.r
 
 #### Result
-![](https://i.imgur.com/oyCMNnL.jpg)
+![](https://i.imgur.com/0KYAITy.png)
+
 
 ## Raw data
 * TBN data：
@@ -105,5 +107,4 @@
     * 下載方式：[政府資料開放平臺-鄉鎮市區界線(TWD97經緯度)](https://data.gov.tw/dataset/7441)
 
 ## References
-
 Troudet, J., Grandcolas, P., Blin, A. et al. Taxonomic bias in biodiversity data and societal preferences. Sci Rep 7, 9132 (2017). https://doi.org/10.1038/s41598-017-09084-6
