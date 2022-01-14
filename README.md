@@ -20,7 +20,11 @@
 * data bias for spatial of town.r
 
 ## Taxonomic Data Bias
->生物類群資料偏差計算公式：類群實際資料筆數-(總資料筆數*物種比例)
+![](https://i.imgur.com/LLz66Tt.png)
+
+
+### 生物類群資料偏差計算公式
+類群實際資料筆數-(總資料筆數*物種比例)
 
 ### 生物類群的資料偏差
 根據TBN生物類群區分，計算各類群的資料偏差
@@ -53,7 +57,11 @@
 ![](https://i.imgur.com/mMZV5n0.png)
 
 ## Spatial Data Bias
->空間資料偏差計算公式：行政區資料筆數-(總資料筆數*行政區面積比例)
+![](https://i.imgur.com/6VrLda6.png)
+
+
+### 空間資料偏差計算公式：
+行政區資料筆數-(總資料筆數*行政區面積比例)
 
 ### 縣市的資料偏差
 以縣市作空間區分，計算個縣市的資料偏差
@@ -96,7 +104,10 @@
     * versoin：2020/12/31以前
     * 概述：下載臺灣範圍資料
     * 下載方式：[GBIF](https://www.gbif.org/occurrence/search?advanced=1&dataset_key=4fa7b334-ce0d-4e88-aaae-2e0c138d049e&publishing_country=TW)
-
+* TBN Taxa Tree：
+    * version：2021/06/30以前
+    * 概述：TBN taxonbased 物種名錄系統
+    * 下載方式：[TaxaTree（需來信申請帳號）](https://taxatree.tbn.org.tw/)
 * Taiwan county polygon：
     * versoin：1
     * 概述：政府資料開放授權條款-第1版
