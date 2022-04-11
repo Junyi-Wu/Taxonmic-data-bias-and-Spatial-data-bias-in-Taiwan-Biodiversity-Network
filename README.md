@@ -1,4 +1,4 @@
-# Taxonmic data bias and Spatial data bias in Taiwan Biodiversity Network
+# Taxonomic data bias and Spatial data bias in Taiwan Biodiversity Network
 ## 簡介
 資料偏差（Data Bias）計算，參考[Troudet et al. 2017](https://doi.org/10.1038/s41598-017-09084-6)，將預期資料筆數（ideal sampling）與實際資料筆數相減。Data Bias可區分成Taxonomic Data Bias 以及 Spatial Data Bias。Taxonomic Data Bias是以物種比例為基準所算出的資料偏差。Spatial Data Bias是指以面積大小為基準所算出的資料偏差。
 
